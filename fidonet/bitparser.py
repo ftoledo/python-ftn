@@ -151,7 +151,7 @@ class Struct (object):
         try:
             for f in self._fieldlist:
                 data[f.name] = f.unpack(bits)
-        except bitstring.errors.ReadError:
+        except bitstring.ReadError:
             if not f.missingok:
                 raise EndOfData
 
